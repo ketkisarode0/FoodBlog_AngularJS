@@ -1,0 +1,11 @@
+<div class = "app">
+<div data-ng-include="'src/components/Views/common/header.html'"></div>
+        <div class = "row">
+            <div  class="nav" data-ng-include="'src/components/Views/common/navbar.html'"></div>
+            <div class="col-sm-7"> 
+                <ng-view></ng-view>
+            </div>
+            <div data-ng-include=" 'src/components/Views/common/right.html' " ></div> 
+        </div>
+        <div class="footer" data-ng-include="'src/components/Views/common/footer.html'"></div>
+    </div>
