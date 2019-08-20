@@ -6,28 +6,29 @@ angular.module('book.service',[])
        function($http) {
 
          var service = {};
-         var urlBase = "http://localhost:3022/book";
+        //  var urlBase = "http://localhost:3022/book";
+        var urlBase = "/api/book";
+
+
+       
          service.validate = Validate
          service.addBook = AddBook
          service.deleteBook = DeleteBook
          return service;    
 
         function Validate() {
-            var url =  $http.get(urlBase);
+            var url = $http.get(urlBase);
             return $http.get(urlBase);  
         }; 
 
         function AddBook(book){                                   
             var url = $http.post(urlBase, JSON.stringify(book))
-            return url;
-        }     
+            return url; 
+        }; 
         
         function DeleteBook(id){
-          // console.log(id)
           var urlstr = urlBase+'/'+ id;
           var url = $http.delete(urlstr)
-            // var url = $http.delete(urlBase,'/' + id)
-            // console.log(urlstr)
             return url;
         }
 }]);    

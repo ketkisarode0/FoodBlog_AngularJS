@@ -37,14 +37,17 @@ module.exports = {
             },
         ]
     },
-    // devServer: {
-    //     proxy: {
-    //       '/api': {
-    //         target: 'http://localhost:3022/book',
-    //         pathRewrite: {'^/api' : ''}
-    //       }
-    //     }
-    //   },
+    devServer: {
+        proxy: {
+        "/api": {
+        "target": "http://localhost:3022",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        }
+        }
+        }
+      },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",

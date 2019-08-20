@@ -5,7 +5,8 @@ angular.module('receipe.controller', [])
                 function($scope, $http){
                  $scope.message = 'hello index';
 
-                 $http.get("http://localhost:3022/")
+                //  $http.get("http://localhost:3022/")
+                 $http.get("/api/receipe")
                  .then(function(response){
                      console.log(response.data.json);
                  });

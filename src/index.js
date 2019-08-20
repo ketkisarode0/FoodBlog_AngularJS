@@ -2,8 +2,6 @@ import receipe from './modules/receipe/index';
 import book from './modules/book/index';
 import './css/bookpage.css';
 import './css/mainpage.css';
-// export {book}
-// export {receipe}
  angular.module('myApp', 
     [
         'ngRoute',

@@ -34,22 +34,17 @@ angular.module('book.controller', ['book.services'])
             {
                 console.log($scope.newBook);
                 bookService.addBook($scope.newBook).then(
-                    function success(response){
-                    console.log(response.data.message);
-                
-                    $scope.Books.unshift(response.data.book);
-                    console.log( $scope.Books)
-                   
-
-                   
-                });
+                function success(response){
+                console.log(response.data.message);
+                $scope.Books.unshift(response.data.book);
+                console.log( $scope.Books)  
+            });
 
                 
 
-                $scope.newBook.name="";
-                $scope.newBook.author="";
-                
-                $scope.checkFieldVal();
+            $scope.newBook.name="";
+            $scope.newBook.author="";    
+            $scope.checkFieldVal();
             
 
 
@@ -60,23 +55,22 @@ angular.module('book.controller', ['book.services'])
                     "name":"",
                     "author": ""
                 }
-            }
+              }
             
             }
             
         
-                $scope.deleteBook = function(id, index) { 
+            $scope.deleteBook = function(id, index) { 
                     
-                       console.log(id);
-                       bookService.deleteBook(id).then(
-                        function success(response){
-                            
-                        })
-                        $scope.Books.splice(index, 1)
-                        console.log("Book Id", index);
-                        console.log(id)
+                console.log(id);
+                bookService.deleteBook(id).then(
+                    function success(response){
+                    })
+                $scope.Books.splice(index, 1)
+                console.log("Book Id", index);
+                console.log(id)
                   
-                };
+            };
    
     });
    
