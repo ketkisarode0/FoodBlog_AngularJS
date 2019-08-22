@@ -1,0 +1,79 @@
+
+
+
+  
+   .divtable
+   {
+       display:  table;
+       width:100%;
+       background-color:#eee;
+       border:1px solid  black;
+       border-spacing:5px;
+      
+   }
+
+   .divrow
+   {
+      display:table-row;
+      width:auto;
+      border:1px solid  black;
+   }
+
+   .divcell
+   {
+       float:left;
+       display:table-column;
+       width:200px;
+       background-color:#ccc;
+       text-align: center;
+       opacity: 0.8;
+   } 
+ 
+ h2 {
+   color :#973153;
+ }
+ 
+ * {
+   box-sizing: border-box;
+ }
+ 
+
+ .div{
+   width:100%;
+ }
+ 
+ .col-sm-3 {
+   float: left;
+   width:20%;
+   padding: 10px;
+   height: 500px;
+ }
+ .col-sm-6 {
+   float: left;
+   width:60%;
+   padding: 10px;
+   height: 500px;
+ }
+ 
+ 
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ } 
+ 
+ h1{
+   color: #973153;
+   background-color: antiquewhite;
+ }
+ 
+header{
+ color: #973153;
+ background-color: antiquewhite;
+ 
+}
+ 
+.scrollit {
+ overflow:scroll;
+ height:100px;
+}

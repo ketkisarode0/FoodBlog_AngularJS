@@ -1,25 +1,33 @@
-import receipe from './modules/receipe/index';
-import book from './modules/book/index';
+import receipe from './modules/receipes/receipes';
+import book from './modules/books/books';
 import './css/bookpage.css';
-import './css/mainpage.css';
+import './css/receipes.css';
+import angular from 'angular';
+import routeProvider from 'angular-route';
+import Common from './components/app';
+import template from './components/app.html';
  angular.module('myApp', 
     [
         'ngRoute',
+        'app.common',
         'receipe',
         'book'
-    ]).config(['$routeProvider', function($routeProvider) {
+    ]).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/Home', {
-        templateUrl : '/src/modules/receipe/views/receipe.html',
-        controller: 'indexController'
+        templateUrl : '/src/modules/receipes/receipes.html',
+        controller: 'receipeController'
     })
     .otherwise({
          redirectTo: '/Home'
      });
-     
-   
+     $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
 }]) .component('app', {
-    templateUrl: './src/components/Views/home.html'
+    template
 });
+
 
 
 

@@ -1,19 +1,6 @@
+/* 
 
 
-h1{
-    color: #973153;
-    background-color: antiquewhite;
-  }
-  
-header{
-  color: #973153;
-  
-}
-  
-.scrollit {
-  overflow:scroll;
-  height:100px;
-}
   
    .divtable
     {
@@ -75,4 +62,18 @@ header{
     clear: both;
   } 
   
+  h1{
+    color: #973153;
+    background-color: antiquewhite;
+  }
   
+header{
+  color: #973153;
+  background-color: antiquewhite;
+  
+}
+  
+.scrollit {
+  overflow:scroll;
+  height:100px;
+} */

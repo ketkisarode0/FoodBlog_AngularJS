@@ -7,7 +7,7 @@ angular.module('book.service',[])
 
          var service = {};
         //  var urlBase = "http://localhost:3022/book";
-        var urlBase = "/api/book";
+        var urlBase = "/api/books";
 
 
        
