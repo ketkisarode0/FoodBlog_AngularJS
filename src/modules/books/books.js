@@ -3,16 +3,16 @@ import template from './books.html'
 import angular from 'angular';
 import routeProvider from 'angular-route';
 
-const booksModule = angular.module('book', [])
+const booksModule = angular.module('book', ['book.services'])
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/Books', {
         templateUrl : 'src/modules/books/books.html',
         controller: 'tableCtrl'
     })                      
-}]);
-booksModule.service('bookService', function(){})
+}])
+// booksModule.service('bookService', function(){})
 
-booksModule.controller('tableCtrl', ['$scope', '$http', 'bookService', function($scope, $http, bookService){
+.controller('tableCtrl', ['$scope', '$http', 'bookService', function($scope, $http, bookService){
             
 
             bookService.validate().then(
