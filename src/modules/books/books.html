@@ -4,32 +4,31 @@
    <div class="w3-padding w3-large w3-text-white ">
       <input type="text" placeholder="Search here" ng-model="searchText"> 
         </div>  
-           <br>  </br>
-           <div class="scrollbar">
-           <div class="divtable">
-           <div class="divrow">
+          <br>  </br>
+          <div class="scrollbar">
+          <div class="divtable">
+          <div class="divrow">
         </div>
               
         <div class="divrow">
-               <input class="divcell" placeholder="Book Name" ng-model="newBook.name" ng-change="checkInputVal()" required>
-               <input class="divcell" placeholder="Book Author" ng-model="newBook.author" ng-change="checkInputVal()" required>
-               <button type="button" class="btn btn-primary" ng-disabled="hideField" ng-click="addBook()">Add</button>{{hideField}}
+          <input class="divcell" placeholder="Book Name" ng-model="newBook.name" ng-change="checkInputVal()" required>
+          <input class="divcell" placeholder="Book Author" ng-model="newBook.author" ng-change="checkInputVal()" required>
+          <button type="button" class="btn btn-primary" ng-disabled="hideField" ng-click="addBook()">Add</button>{{hideField}}
         </div>
            
         <div class="booklist">
-              <div class="divrowrecords" ng-repeat="b in Books | filter: searchText">
-                  <div class="bookrecord">
-                    <div class="records">{{$index + 1 }}.</div>
-                    <div class="records">{{b.name}}</div>
-                    <div class="records">by</div>
-                    <div class="records">{{b.author}}</div>
-                  </div>
-                  <button type="button" class="btn btn-primary delete"  ng-click="deleteBook(b._id, $index)">Delete</button>
-              </div>
-
+          <div class="divrowrecords" ng-repeat="b in Books | filter: searchText">
+            <div class="bookrecord">
+              <div class="records">{{$index + 1 }}.</div>
+              <div class="records">{{b.name}}</div>
+              <div class="records">by</div>
+              <div class="records">{{b.author}}</div>
+            </div>
+            <button type="button" class="btn btn-primary delete"  ng-click="deleteBook(b._id, $index)">Delete</button>
+          </div>
         </div>
       </div>
-  </div>
+    </div>
 </div>
 
                 

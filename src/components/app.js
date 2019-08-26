@@ -9,8 +9,7 @@ const commonModule = angular.module('app.common', [
   Footer,
   Header,
   rightcolumn
-])
-  
-.name;
+  ])
+  .name;
 
 export default commonModule;

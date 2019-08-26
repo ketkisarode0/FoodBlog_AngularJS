@@ -1,13 +1,11 @@
-import angular from 'angular';
+import angular from "angular";
 import template from "./rightcolumn.html";
 
+const rightcolumnModule = angular
+  .module("rightcolumn", [])
 
-const rightcolumnModule = angular.module('rightcolumn', [])
-
-.component('rightcolumn', {
+  .component("rightcolumn", {
     template
-})
-  
-.name;
+  }).name;
 
 export default rightcolumnModule;
