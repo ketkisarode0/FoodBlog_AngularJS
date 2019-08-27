@@ -1,7 +1,6 @@
 import "../../factories/book/index";
 import template from "./books.html";
 import angular from "angular";
-// import routeProvider from 'angular-route';
 
 const booksModule = angular
   .module("book", ["book.services"])

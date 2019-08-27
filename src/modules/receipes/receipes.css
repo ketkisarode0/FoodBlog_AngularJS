@@ -153,11 +153,12 @@ li a:hover {
   text-decoration: none;
 }
 
-.footer {
+/* .footer {
   text-align: center;
   color: #973153;
-  background-color: B956B9;
-}
+  background-color: #b9d6b9;
+
+} */
 
 .scrollbar {
   overflow: auto;

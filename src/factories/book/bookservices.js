@@ -20,8 +20,10 @@ angular.module("book.service", []).factory("bookService", [
       return url;
     }
     function DeleteBook(id) {
+      console.log(id)
       var urlstr = urlBase + "/" + id;
       var url = $http.delete(urlstr);
+      
       return url;
     }
   }

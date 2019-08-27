@@ -1,7 +1,6 @@
 import "./modules/receipes/receipes";
 import "./modules/books/books";
 import angular from "angular";
-// import routeProvider from "angular-route";
 import "./components/app";
 import template from "./components/app.html";
 angular
